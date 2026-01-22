@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于我们 · RoyalWind Energy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="state-idle" data-mode="balanced">
+  <div class="bg-layer">
+    <canvas id="bg-canvas"></canvas>
+    <canvas id="flow-canvas"></canvas>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">RoyalWind Energy</div>
+    <nav class="nav">
+      <a href="#overview" data-i18n="nav.overview">概览</a>
+      <a href="#capability" data-i18n="nav.capability">能力矩阵</a>
+      <a href="#timeline" data-i18n="nav.timeline">里程碑</a>
+      <a href="#team" data-i18n="nav.team">团队与合规</a>
+      <a href="#clients" data-i18n="nav.clients">客户案例</a>
+      <a href="#contact" data-i18n="nav.contact">联系</a>
+    </nav>
+    <div class="header-actions">
+      <button class="ghost" id="lang-toggle">EN</button>
+      <button class="ghost" id="mode-toggle">实验</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="hero.eyebrow">风电运维可信服务商</p>
+        <h1 data-i18n="hero.title">以工程纪律与数据化响应，守护风机全生命周期健康</h1>
+        <p class="lead" data-i18n="hero.subtitle">
+          RoyalWind Energy 专注风电设备维护与改造，覆盖海上与陆上场景，为业主与OEM提供可审计、可追溯、可验证的服务体系。
+        </p>
+        <div class="hero-actions">
+          <button class="primary" data-i18n="hero.cta">立即咨询</button>
+          <button class="ghost" data-i18n="hero.download">下载公司介绍 (PDF)</button>
+        </div>
+        <div class="hero-advantages">
+          <div class="adv-card" data-tilt>
+            <h3 data-i18n="hero.adv1.title">响应承诺</h3>
+            <p data-i18n="hero.adv1.desc">24小时内远程诊断，72小时内派发现场团队（可替换）</p>
+          </div>
+          <div class="adv-card" data-tilt>
+            <h3 data-i18n="hero.adv2.title">HSE 体系</h3>
+            <p data-i18n="hero.adv2.desc">零重大事故纪录，双重许可与作业票闭环</p>
+          </div>
+          <div class="adv-card" data-tilt>
+            <h3 data-i18n="hero.adv3.title">工程数据化</h3>
+            <p data-i18n="hero.adv3.desc">设备健康档案 + 工单闭环，关键指标可追溯</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="energy-card">
+          <h2 data-i18n="core.title">能量核心</h2>
+          <p data-i18n="core.subtitle">旋转视角 · 点击触发能量爆发</p>
+          <canvas id="core-canvas" width="360" height="360"></canvas>
+          <div class="core-meta">
+            <span data-i18n="core.meta1">状态：实时监测</span>
+            <span data-i18n="core.meta2">输入：风场遥测</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="capability">
+      <div class="section-title">
+        <h2 data-i18n="capability.title">能力矩阵</h2>
+        <p data-i18n="capability.subtitle">服务类型 × 场景 × 响应机制</p>
+      </div>
+      <div class="matrix">
+        <div class="matrix-row header">
+          <div data-i18n="capability.col1">服务类型</div>
+          <div data-i18n="capability.col2">场景</div>
+          <div data-i18n="capability.col3">响应机制</div>
+          <div data-i18n="capability.col4">工具与能力</div>
+        </div>
+        <div class="matrix-row">
+          <div data-i18n="capability.row1.type">机组例行维护</div>
+          <div data-i18n="capability.row1.scene">陆上/海上全容量风场</div>
+          <div data-i18n="capability.row1.response">7×24 值守 + 预检清单</div>
+          <div data-i18n="capability.row1.tools">扭矩工具、液压拉伸、主控诊断</div>
+        </div>
+        <div class="matrix-row">
+          <div data-i18n="capability.row2.type">主部件维修</div>
+          <div data-i18n="capability.row2.scene">齿轮箱、主轴、叶片</div>
+          <div data-i18n="capability.row2.response">专家级评估 + 备件联动</div>
+          <div data-i18n="capability.row2.tools">无损检测、振动分析、吊装协调</div>
+        </div>
+        <div class="matrix-row">
+          <div data-i18n="capability.row3.type">性能提升改造</div>
+          <div data-i18n="capability.row3.scene">控制策略升级、功率曲线修正</div>
+          <div data-i18n="capability.row3.response">远程调参 + 效果验证</div>
+          <div data-i18n="capability.row3.tools">数据建模、SCADA 接口</div>
+        </div>
+        <div class="matrix-row">
+          <div data-i18n="capability.row4.type">专项安全检查</div>
+          <div data-i18n="capability.row4.scene">大风季、台风季、冰冻季</div>
+          <div data-i18n="capability.row4.response">专项巡检 + 风险闭环</div>
+          <div data-i18n="capability.row4.tools">高空救援、LOTO 管控</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section data-section reveal" id="metrics">
+      <div class="section-title">
+        <h2 data-i18n="metrics.title">关键指标（可替换）</h2>
+        <p data-i18n="metrics.subtitle">让可信度落在数字上</p>
+      </div>
+      <div class="metrics">
+        <div class="metric-card" data-tilt>
+          <div class="metric-value" data-count="520" data-suffix="+">0</div>
+          <p data-i18n="metrics.item1">年度作业工单</p>
+        </div>
+        <div class="metric-card" data-tilt>
+          <div class="metric-value" data-count="18" data-suffix="省">0</div>
+          <p data-i18n="metrics.item2">覆盖省份/海域</p>
+        </div>
+        <div class="metric-card" data-tilt>
+          <div class="metric-value" data-count="96" data-suffix="%">0</div>
+          <p data-i18n="metrics.item3">首访解决率</p>
+        </div>
+        <div class="metric-card" data-tilt>
+          <div class="metric-value" data-count="240" data-suffix="h">0</div>
+          <p data-i18n="metrics.item4">平均故障闭环</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section timeline reveal" id="timeline">
+      <div class="section-title">
+        <h2 data-i18n="timeline.title">里程碑</h2>
+        <p data-i18n="timeline.subtitle">以工程积累验证可信度</p>
+      </div>
+      <div class="timeline-track">
+        <div class="timeline-item">
+          <span>2014</span>
+          <p data-i18n="timeline.item1">公司成立，建立风电运维人才库</p>
+        </div>
+        <div class="timeline-item">
+          <span>2018</span>
+          <p data-i18n="timeline.item2">完成首个海上风场整场维保</p>
+        </div>
+        <div class="timeline-item">
+          <span>2021</span>
+          <p data-i18n="timeline.item3">引入数字工单与远程诊断体系</p>
+        </div>
+        <div class="timeline-item">
+          <span>2024</span>
+          <p data-i18n="timeline.item4">完成跨区域应急响应网络布局</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="team">
+      <div class="section-title">
+        <h2 data-i18n="team.title">团队与安全合规</h2>
+        <p data-i18n="team.subtitle">工程师文化 + HSE 纪律</p>
+      </div>
+      <div class="grid two">
+        <div class="glass-card">
+          <h3 data-i18n="team.card1.title">团队画像</h3>
+          <ul>
+            <li data-i18n="team.card1.item1">核心工程师平均从业 8 年</li>
+            <li data-i18n="team.card1.item2">具备高空作业、海上作业双资质</li>
+            <li data-i18n="team.card1.item3">典型工种覆盖机械、电气、控制、复材</li>
+          </ul>
+        </div>
+        <div class="glass-card">
+          <h3 data-i18n="team.card2.title">安全与质量</h3>
+          <ul>
+            <li data-i18n="team.card2.item1">HSE 管理体系 + LOTO 流程</li>
+            <li data-i18n="team.card2.item2">ISO 9001/14001/45001 体系对标</li>
+            <li data-i18n="team.card2.item3">作业前风险评估 + 复盘闭环</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="clients">
+      <div class="section-title">
+        <h2 data-i18n="clients.title">客户与项目案例（匿名示例）</h2>
+        <p data-i18n="clients.subtitle">可替换为真实客户</p>
+      </div>
+      <div class="grid three">
+        <article class="case-card" data-tilt>
+          <h3 data-i18n="clients.case1.title">华北某 300MW 陆上风场</h3>
+          <p data-i18n="clients.case1.desc">年度计划检修 + 响应式故障处理，减少停机 18%</p>
+          <span data-i18n="clients.case1.tag">维护与改造</span>
+        </article>
+        <article class="case-card" data-tilt>
+          <h3 data-i18n="clients.case2.title">沿海 200MW 海上风场</h3>
+          <p data-i18n="clients.case2.desc">台风季专项巡检，建立叶片健康档案</p>
+          <span data-i18n="clients.case2.tag">海上专项</span>
+        </article>
+        <article class="case-card" data-tilt>
+          <h3 data-i18n="clients.case3.title">西北高寒风场集群</h3>
+          <p data-i18n="clients.case3.desc">低温工况优化与零部件寿命评估</p>
+          <span data-i18n="clients.case3.tag">性能提升</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta reveal" id="contact">
+      <div>
+        <h2 data-i18n="contact.title">准备好提升风场可用率了吗？</h2>
+        <p data-i18n="contact.subtitle">留下需求，我们将在 24 小时内响应。</p>
+      </div>
+      <div class="cta-actions">
+        <button class="primary" data-i18n="contact.cta">预约咨询</button>
+        <button class="ghost" data-i18n="contact.download">下载公司介绍</button>
+      </div>
+      <div class="contact-info">
+        <div>
+          <span data-i18n="contact.email.label">邮箱</span>
+          <strong>info@royalwind-energy.com</strong>
+        </div>
+        <div>
+          <span data-i18n="contact.phone.label">电话</span>
+          <strong>+86 400 000 0000</strong>
+        </div>
+        <div>
+          <span data-i18n="contact.region.label">服务区域</span>
+          <strong data-i18n="contact.region.value">中国沿海与内陆风场</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="footer.copy">© 2025 RoyalWind Energy. 风电设备维护服务 · All Rights Reserved.</p>
+  </footer>
+
+  <aside class="perf-panel">
+    <div class="perf-row">
+      <span>FPS</span>
+      <strong id="fps">--</strong>
+    </div>
+    <div class="perf-row">
+      <span data-i18n="perf.mode">模式</span>
+      <strong id="mode">Balanced</strong>
+    </div>
+    <div class="perf-row">
+      <span data-i18n="perf.particles">粒子</span>
+      <strong id="particles">--</strong>
+    </div>
+    <div class="perf-row">
+      <span data-i18n="perf.blur">模糊</span>
+      <strong id="blur">--</strong>
+    </div>
+  </aside>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
