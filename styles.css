@@ -1,0 +1,225 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --primary: #1f3a5f;
+  --secondary: #2f5c8f;
+  --accent: #f2b543;
+  --text: #1d2433;
+  --muted: #5f6b7a;
+  --bg: #f5f7fb;
+  --card-bg: #ffffff;
+  --border: #e5e9f2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero {
+  background: linear-gradient(120deg, #ffffff 0%, #eef3fb 100%);
+  padding: 40px 8vw 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.brand {
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.nav-button {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  color: var(--primary);
+  margin: 8px 0 12px;
+}
+
+.hero-content h2 {
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.hero-description {
+  max-width: 680px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.hero-actions button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.secondary {
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.section {
+  padding: 50px 8vw;
+}
+
+.section.light {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-heading h3 {
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 20px rgba(31, 58, 95, 0.06);
+}
+
+.card h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.card-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(47, 92, 143, 0.08);
+  color: var(--secondary);
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.rituals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.rituals h5 {
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.rituals p {
+  color: var(--muted);
+}
+
+.focus-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.focus-list li {
+  background: var(--card-bg);
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.focus-list li::before {
+  content: "•";
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+body.focus-mode {
+  background: #eef1f7;
+}
+
+body.focus-mode .hero {
+  background: linear-gradient(120deg, #f6f8fc 0%, #e1e7f2 100%);
+}
+
+body.focus-mode .primary {
+  background: var(--accent);
+  color: #2d2d2d;
+}
+
+@media (max-width: 720px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
