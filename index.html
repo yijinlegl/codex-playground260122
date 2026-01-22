@@ -3,96 +3,170 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>个人效率工具介绍页</title>
+    <title>Neon Pulse · 未来科技作品展示</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header class="hero">
+  <body data-theme="nebula">
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <header class="hero" id="top">
       <nav class="nav">
-        <span class="brand">晨光记录站</span>
-        <button class="nav-button" id="modeToggle" type="button">切换专注模式</button>
+        <div class="brand">
+          <span class="brand-mark">NP</span>
+          <span>Neon Pulse Lab</span>
+        </div>
+        <div class="nav-actions">
+          <div class="theme-switch" role="group" aria-label="主题切换">
+            <button type="button" class="chip is-active" data-theme="nebula">星云</button>
+            <button type="button" class="chip" data-theme="quantum">量子</button>
+            <button type="button" class="chip" data-theme="aurora">极光</button>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="perfToggle" />
+            <span class="toggle-track"></span>
+            <span class="toggle-label">低性能模式</span>
+          </label>
+        </div>
       </nav>
-      <div class="hero-content">
-        <p class="hero-kicker">家庭成长 · 高效协作 · 温柔陪伴</p>
-        <h1>个人效率工具介绍页</h1>
-        <h2>为我和女儿的生活与成长，打造可持续的记录系统</h2>
-        <p class="hero-description">
-          我们把日常的学习、运动与亲子时光整理成清晰的仪表盘，用更科学的方式陪伴她成长，也让自己保持节奏与仪式感。
-        </p>
-        <div class="hero-actions">
-          <button class="primary">开始记录</button>
-          <button class="secondary">了解系统</button>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-kicker">AI · FUTURE · INTERACTIVE SHOWCASE</p>
+          <h1 class="hero-title">
+            <span>极致科技感</span>
+            <span>未来产品 Landing Page</span>
+          </h1>
+          <p class="hero-subtitle">
+            以霓虹能量为核心的互动实验室，展示你的下一代产品、作品与概念体验。
+          </p>
+          <div class="hero-actions">
+            <button class="primary" type="button">立即体验</button>
+            <button class="ghost" type="button">查看演示</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card" data-depth="0.4">
+              <p class="stat-value" data-counter data-target="98">0</p>
+              <p class="stat-label">体验满意度</p>
+            </div>
+            <div class="stat-card" data-depth="0.3">
+              <p class="stat-value" data-counter data-target="24">0</p>
+              <p class="stat-label">交互模块</p>
+            </div>
+            <div class="stat-card" data-depth="0.2">
+              <p class="stat-value" data-counter data-target="3">0</p>
+              <p class="stat-label">可切换主题</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" data-depth="0.5">
+          <div class="orb-shell">
+            <canvas id="core-canvas" width="420" height="420" aria-label="能量核心"></canvas>
+            <p class="orb-hint">点击能量核心触发爆发</p>
+          </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="section">
+      <section class="section reveal" id="capabilities">
         <div class="section-heading">
-          <h3>三大核心功能</h3>
-          <p>简洁、偏商务的效率系统，专注于亲子生活的高质量管理。</p>
+          <h2>核心能力矩阵</h2>
+          <p>为高端科技产品准备的模块化视觉与交互体系。</p>
         </div>
         <div class="card-grid">
-          <article class="card">
-            <h4>家庭日程协作</h4>
-            <p>
-              将我的工作节奏和女儿的学习、活动排期整合在一个看板，避免冲突，提前准备。
-            </p>
-            <span class="card-tag">每周例会 · 共享提醒</span>
+          <article class="glow-card" data-depth="0.18">
+            <h3>玻璃拟态界面</h3>
+            <p>层叠光影与雾化透明度，形成未来感信息栈。</p>
+            <span class="tag">Glassmorphism</span>
           </article>
-          <article class="card">
-            <h4>成长记录库</h4>
-            <p>
-              记录她的阅读、运动、习惯打卡和闪光时刻，形成可追踪的成长档案。
-            </p>
-            <span class="card-tag">照片 · 语音 · 里程碑</span>
+          <article class="glow-card" data-depth="0.2">
+            <h3>实时动态背景</h3>
+            <p>Canvas 能量流动与星云粒子，确保稳定帧率。</p>
+            <span class="tag">60FPS Optimized</span>
           </article>
-          <article class="card">
-            <h4>家庭目标仪表盘</h4>
-            <p>
-              将“亲子旅行计划”“我的技能进阶”等目标可视化，保持全家共识与动力。
-            </p>
-            <span class="card-tag">季度复盘 · 指标追踪</span>
+          <article class="glow-card" data-depth="0.22">
+            <h3>沉浸式交互</h3>
+            <p>滚动触发浮动、统计数值增长与鼠标视差。</p>
+            <span class="tag">Motion Driven</span>
           </article>
         </div>
       </section>
 
-      <section class="section light">
+      <section class="section highlight reveal" id="modules">
         <div class="section-heading">
-          <h3>我们的日常仪式</h3>
-          <p>一些额外的内容，让记录更有温度。</p>
+          <h2>技术体验模块</h2>
+          <p>展示你的产品核心价值，让观众感受未来。</p>
         </div>
-        <div class="rituals">
-          <div>
-            <h5>晨间 10 分钟</h5>
-            <p>一起规划今天最重要的三件事，让她学会优先级。</p>
+        <div class="module-grid">
+          <div class="module-card glow-card" data-depth="0.16">
+            <h4>AI 模型展示舱</h4>
+            <p>突出模型能力、推理速度、稳定性与行业应用场景。</p>
+            <ul>
+              <li>低延迟交互</li>
+              <li>实时可视化指标</li>
+              <li>多模态演示</li>
+            </ul>
           </div>
-          <div>
-            <h5>晚间小结</h5>
-            <p>写下“今天最开心的事”，培养情绪复盘能力。</p>
+          <div class="module-card glow-card" data-depth="0.12">
+            <h4>能量驱动仪表盘</h4>
+            <p>用数值、进度与状态环呈现系统状态。</p>
+            <div class="progress">
+              <span>系统稳定性</span>
+              <div class="progress-bar"><span style="width: 92%"></span></div>
+            </div>
+            <div class="progress">
+              <span>计算负载</span>
+              <div class="progress-bar"><span style="width: 68%"></span></div>
+            </div>
           </div>
-          <div>
-            <h5>周末成长档案</h5>
-            <p>整理照片和语音，留下每一次成长的关键瞬间。</p>
+          <div class="module-card glow-card" data-depth="0.14">
+            <h4>未来体验指引</h4>
+            <p>通过触感反馈、能量波纹与视差引导用户探索。</p>
+            <button class="ghost" type="button">进入交互空间</button>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section reveal" id="timeline">
         <div class="section-heading">
-          <h3>本周家庭聚焦</h3>
-          <p>自动生成的小清单，保持高效与平衡。</p>
+          <h2>进化节奏</h2>
+          <p>从概念到落地的未来科技路线。</p>
         </div>
-        <ul class="focus-list" id="focusList">
-          <li>女儿的科学实验报告准备</li>
-          <li>亲子阅读《天空之城》</li>
-          <li>我的健身与早睡计划</li>
-        </ul>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="pulse"></span>
+            <div>
+              <h5>探索期</h5>
+              <p>沉浸式品牌叙事与动态视觉策略设计。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="pulse"></span>
+            <div>
+              <h5>构建期</h5>
+              <p>核心交互模块、能量核心与数据仪表盘。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="pulse"></span>
+            <div>
+              <h5>发布期</h5>
+              <p>面向发布会与作品集的高阶视觉呈现。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section call-to-action reveal" id="contact">
+        <div>
+          <h2>准备好让你的作品站在未来</h2>
+          <p>将品牌故事与科技感打包为一次视觉冲击。</p>
+        </div>
+        <button class="primary" type="button">启动未来计划</button>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© 2024 晨光记录站 · 用效率守护家庭成长</p>
+      <p>© 2024 Neon Pulse Lab · 极致科技感作品展示</p>
+      <a href="#top">返回顶部</a>
     </footer>
 
     <script src="script.js"></script>
